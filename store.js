@@ -2,7 +2,14 @@
 var products = []
 
 // Declare `shoppingCart`, something where you will be storing all products that the user buys.
+var shoppingCart = [];
+
 // Declare `products`, the different that you will be selling under each of the departments.
+var products = {
+  referenceNumber: 0,
+  name: "",
+  price: "",
+};
 
 var printProductsFromShoppingCart = function() {
   // iterate over the shoppingCart and display the contents
@@ -45,7 +52,7 @@ var printProductsOnScreen = function () {
     referenceNumberElement.onclick = function () {
       //this method is called when the reference number is clicked
       var productNumber = this.innerHTML;
-      //use the reference number to look up the product and add it to 
+      //use the reference number to look up the product and add it to
       addProductToCart(productNumber);
     };
 
