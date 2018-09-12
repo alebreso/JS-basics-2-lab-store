@@ -58,9 +58,8 @@ var addProductToCart = function(productNumber) {
   })
 
   printProductsFromShoppingCart();
-
-  // calculate the total price of your cart, and use it:
   let totalAmount = 0;
+  // calculate the total price of your cart, and use it:
   for (i = 0; i < shoppingCart.length; i++) {
     totalAmount = totalAmount + shoppingCart[i].price;
   }
@@ -68,9 +67,17 @@ var addProductToCart = function(productNumber) {
 };
 
 var checkoutCustomer = function() {
+  let amount = document.getElementById('total-price').innerHTML;
+  console.log(amount);
+  amount=parseInt(amount);
   //replace this with showing a nice goodbye message showing the amount to be paid.
-  window.alert("Bye")
+  window.alert(`your total is ${amount}`);
+  window.alert('thanks for your purchase and see you soon');
   //empty the shopping cart
+  shoppingCart=[];
+  document.getElementById('shopping-cart').innerHTML = "";
+  document.getElementById('total-price').innerHTML="";
+
 }
 
 //
